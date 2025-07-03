@@ -33,7 +33,7 @@ export default function ResourcesHero() {
     };
 
     return (
-        <section className="resources-hero-section relative bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 overflow-hidden">
+        <section className="resources-hero-section relative bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute inset-0" style={{
@@ -50,12 +50,12 @@ export default function ResourcesHero() {
                             <li>
                                 <Link
                                     href="/"
-                                    className="text-blue-100 hover:text-white transition-colors duration-200"
+                                    className="text-teal-100 hover:text-white transition-colors duration-200"
                                 >
                                     Home
                                 </Link>
                             </li>
-                            <li className="text-blue-200">/</li>
+                            <li className="text-teal-200">/</li>
                             <li className="text-white font-medium">Resources</li>
                         </ol>
                     </nav>
@@ -66,7 +66,7 @@ export default function ResourcesHero() {
                     </h1>
 
                     {/* Intro Text */}
-                    <p className="font-source-sans text-blue-100 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed">
+                    <p className="font-source-sans text-teal-100 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed">
                         Discover valuable insights, industry trends, and expert knowledge to enhance your professional development and organizational growth.
                     </p>
 
@@ -74,14 +74,14 @@ export default function ResourcesHero() {
                     <form onSubmit={handleSearch} className="max-w-2xl mx-auto mb-12">
                         <div className="relative">
                             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                <Search className="h-5 w-5 text-blue-300" />
+                                <Search className="h-5 w-5 text-teal-300" />
                             </div>
                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 placeholder="Search articles, guides, and resources..."
-                                className="w-full pl-12 pr-4 py-4 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent font-source-sans"
+                                className="w-full pl-12 pr-4 py-4 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-teal-200 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent font-source-sans"
                             />
                             <button
                                 type="submit"
@@ -96,34 +96,34 @@ export default function ResourcesHero() {
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                         <div className="text-center">
                             <div className="mx-auto w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
-                                <BookOpen className="w-6 h-6 text-white" />
+                                <BookOpen className="w-6 h-6 text-black" />
                             </div>
                             <div className="text-white font-montserrat font-semibold text-sm">Articles</div>
-                            <div className="text-blue-200 text-xs">Expert insights</div>
+                            <div className="text-teal-200 text-xs">Expert insights</div>
                         </div>
 
                         <div className="text-center">
                             <div className="mx-auto w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
-                                <FileText className="w-6 h-6 text-white" />
+                                <FileText className="w-6 h-6 text-black" />
                             </div>
                             <div className="text-white font-montserrat font-semibold text-sm">Guides</div>
-                            <div className="text-blue-200 text-xs">Step-by-step</div>
+                            <div className="text-teal-200 text-xs">Step-by-step</div>
                         </div>
 
                         <div className="text-center">
                             <div className="mx-auto w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
-                                <Video className="w-6 h-6 text-white" />
+                                <Video className="w-6 h-6 text-black" />
                             </div>
                             <div className="text-white font-montserrat font-semibold text-sm">Videos</div>
-                            <div className="text-blue-200 text-xs">Visual learning</div>
+                            <div className="text-teal-200 text-xs">Visual learning</div>
                         </div>
 
                         <div className="text-center">
                             <div className="mx-auto w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
-                                <Users className="w-6 h-6 text-white" />
+                                <Users className="w-6 h-6 text-black" />
                             </div>
                             <div className="text-white font-montserrat font-semibold text-sm">Case Studies</div>
-                            <div className="text-blue-200 text-xs">Real examples</div>
+                            <div className="text-teal-200 text-xs">Real examples</div>
                         </div>
                     </div>
                 </div>

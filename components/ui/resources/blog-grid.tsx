@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
 
 interface BlogPost {
@@ -119,6 +120,7 @@ const blogPosts: BlogPost[] = [
 const categories = ['All', 'Leadership', 'Team Building', 'Customer Service', 'Project Management', 'Marketing', 'Finance', 'Human Resources', 'Technology'];
 
 export default function BlogGrid() {
+    const router = useRouter();
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [selectedPost, setSelectedPost] = useState<string | null>(null);
 
@@ -131,9 +133,7 @@ export default function BlogGrid() {
 
     const handlePostClick = (postId: string) => {
         setSelectedPost(postId);
-        // In a real app, this would navigate to the blog post page
-        console.log('Opening blog post:', postId);
-        // You can implement navigation here: router.push(`/blog/${postId}`)
+        router.push(`/blog/${postId}`);
     };
 
     const formatDate = (dateString: string) => {
@@ -162,9 +162,9 @@ export default function BlogGrid() {
                     <button
                         key={category}
                         onClick={() => setSelectedCategory(category)}
-                        className={`px-4 py-2 rounded-full font-montserrat font-medium text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 ${selectedCategory === category
-                                ? 'bg-blue-500 text-white'
-                                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                        className={`px-4 py-2 rounded-full font-montserrat font-medium text-sm transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 ${selectedCategory === category
+                            ? 'bg-teal-500 text-white'
+                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                             }`}
                     >
                         {category}
@@ -177,20 +177,20 @@ export default function BlogGrid() {
                 <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all duration-300">
                     <div className="grid lg:grid-cols-2 gap-0">
                         <div className="relative h-64 lg:h-full">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
                                 <div className="text-white text-center">
                                     <div className="text-6xl font-bold opacity-20">📖</div>
                                 </div>
                             </div>
                             <div className="absolute top-4 left-4">
-                                <span className="px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">
+                                <span className="px-3 py-1 bg-teal-500 text-white text-xs font-medium rounded-full">
                                     Featured
                                 </span>
                             </div>
                         </div>
                         <div className="p-8 flex flex-col justify-center">
                             <div className="flex items-center gap-2 mb-4">
-                                <span className="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-medium rounded-full">
+                                <span className="px-3 py-1 bg-teal-100 text-teal-700 text-xs font-medium rounded-full">
                                     {featuredPost.category}
                                 </span>
                                 <div className="flex items-center gap-1 text-gray-500 text-sm">
@@ -214,7 +214,7 @@ export default function BlogGrid() {
                                 </div>
                                 <button
                                     onClick={() => handlePostClick(featuredPost.id)}
-                                    className="flex items-center gap-2 text-blue-500 hover:text-blue-600 font-montserrat font-medium transition-colors duration-200"
+                                    className="flex items-center gap-2 text-teal-500 hover:text-teal-600 font-montserrat font-medium transition-colors duration-200"
                                 >
                                     Read More
                                     <ArrowRight className="w-4 h-4" />
@@ -236,13 +236,13 @@ export default function BlogGrid() {
                     >
                         {/* Image */}
                         <div className="relative h-48">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
+                            <div className="absolute inset-0 bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center">
                                 <div className="text-white text-center">
                                     <div className="text-4xl font-bold opacity-20">📄</div>
                                 </div>
                             </div>
                             <div className="absolute top-4 left-4">
-                                <span className="px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">
+                                <span className="px-3 py-1 bg-teal-500 text-white text-xs font-medium rounded-full">
                                     {post.category}
                                 </span>
                             </div>
@@ -261,7 +261,7 @@ export default function BlogGrid() {
                                 </div>
                             </div>
 
-                            <h3 className="font-montserrat font-bold text-gray-800 text-lg mb-3 leading-tight group-hover:text-blue-600 transition-colors duration-200">
+                            <h3 className="font-montserrat font-bold text-gray-800 text-lg mb-3 leading-tight group-hover:text-teal-600 transition-colors duration-200">
                                 {post.title}
                             </h3>
 
@@ -284,7 +284,7 @@ export default function BlogGrid() {
 
                             <div className="flex items-center justify-between">
                                 <span className="text-sm text-gray-500">By {post.author}</span>
-                                <ArrowRight className="w-4 h-4 text-blue-500 group-hover:translate-x-1 transition-transform duration-200" />
+                                <ArrowRight className="w-4 h-4 text-teal-500 group-hover:translate-x-1 transition-transform duration-200" />
                             </div>
                         </div>
                     </div>
@@ -293,7 +293,7 @@ export default function BlogGrid() {
 
             {/* Load More Button */}
             <div className="text-center">
-                <button className="px-8 py-3 bg-blue-500 text-white font-montserrat font-semibold rounded-lg hover:bg-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                <button className="px-8 py-3 bg-teal-500 text-white font-montserrat font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
                     Load More Articles
                 </button>
             </div>
