@@ -114,7 +114,6 @@ export default function AwardsPartnerships() {
     const [visibleAwards, setVisibleAwards] = useState<number[]>([]);
     const [currentSlide, setCurrentSlide] = useState(0);
     const sectionRef = useRef<HTMLElement>(null);
-    const carouselRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(

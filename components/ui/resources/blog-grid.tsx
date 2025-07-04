@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Calendar, Clock, ArrowRight, Tag } from 'lucide-react';
 
@@ -122,7 +121,6 @@ const categories = ['All', 'Leadership', 'Team Building', 'Customer Service', 'P
 export default function BlogGrid() {
     const router = useRouter();
     const [selectedCategory, setSelectedCategory] = useState('All');
-    const [selectedPost, setSelectedPost] = useState<string | null>(null);
 
     const filteredPosts = selectedCategory === 'All'
         ? blogPosts
@@ -132,7 +130,6 @@ export default function BlogGrid() {
     const regularPosts = filteredPosts.filter(post => !post.featured);
 
     const handlePostClick = (postId: string) => {
-        setSelectedPost(postId);
         router.push(`/blog/${postId}`);
     };
 

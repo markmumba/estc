@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { Phone, Mail, Clock, ChevronDown } from 'lucide-react';
 
 export default function ContactHero() {
@@ -45,7 +44,7 @@ export default function ContactHero() {
 
                     {/* Intro Text */}
                     <p className="font-source-sans text-teal-100 text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed">
-                        Ready to transform your organization's training? Let's discuss how we can help you achieve your learning objectives.
+                        Ready to transform your organization&lsquo;s training? Let&lsquo;s discuss how we can help you achieve your learning objectives.
                     </p>
 
                     {/* Contact Methods */}

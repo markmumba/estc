@@ -79,7 +79,7 @@ export default function MissionVision() {
                                 animationDelay: '0.2s'
                             }}
                         >
-                            <em>"To empower organizations across Eastern Africa with tailored, high-impact training solutions that unlock employee potential and drive measurable business results."</em>
+                            <em>&ldquo;To empower organizations across Eastern Africa with tailored, high-impact training solutions that unlock employee potential and drive measurable business results.&rdquo;</em>
                         </p>
                     </div>
 
@@ -123,7 +123,7 @@ export default function MissionVision() {
                                 animationDelay: '0.4s'
                             }}
                         >
-                            <em>"To be the region's most trusted partner in corporate learning—innovating continuously to anticipate tomorrow's skill needs and foster transformational growth."</em>
+                            <em>&ldquo;To be the region&lsquo;s most trusted partner in corporate learning—innovating continuously to anticipate tomorrow&lsquo;s skill needs and foster transformational growth.&rdquo;</em>
                         </p>
                     </div>
                 </div>

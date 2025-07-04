@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Navbar from '../shared/navbar';
+import Link from 'next/link';
 
 export default function AboutHero() {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -49,7 +50,7 @@ export default function AboutHero() {
                     style={{ animationDelay: '0s' }}
                 >
                     <nav className="text-light-gray font-source-sans text-sm sm:block hidden">
-                        <a href="/" className="hover:text-white transition-colors duration-200">Home</a>
+                        <Link href="/" className="hover:text-white transition-colors duration-200">Home</Link>
                         <span className="mx-2">/</span>
                         <span className="text-white">About Us</span>
                     </nav>

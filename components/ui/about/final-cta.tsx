@@ -44,7 +44,7 @@ export default function FinalCTA() {
 
                         {/* Subheading */}
                         <p className={`font-source-sans text-gray-600 text-lg md:text-xl lg:text-2xl max-w-2xl transition-all duration-500 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-                            <em>Let's partner to build a learning solution that accelerates your team's success.</em>
+                            <em>Let&lsquo;s partner to build a learning solution that accelerates your team&lsquo;s success.</em>
                         </p>
                     </div>
 

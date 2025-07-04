@@ -35,7 +35,7 @@ export default function BottomCTA() {
 
                     {/* Subtext */}
                     <p className="font-source-sans text-gray-600 mb-10 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-                        Tell us your exact requirements and we'll craft a bespoke program tailored to your organization's unique needs.
+                        Tell us your exact requirements and we&lsquo;ll craft a bespoke program tailored to your organization&lsquo;s unique needs.
                     </p>
 
                     {/* CTA Button */}

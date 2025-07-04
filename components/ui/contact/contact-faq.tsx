@@ -151,7 +151,7 @@ export default function ContactFAQ() {
                         Still have questions?
                     </h3>
                     <p className="font-source-sans text-gray-600 mb-6">
-                        Can't find what you're looking for? Our team is here to help.
+                        Can&lsquo;t find what you&lsquo;re looking for? Our team is here to help.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a

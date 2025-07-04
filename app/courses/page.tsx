@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import CoursesHero from "@/components/ui/courses/courses-hero";
 import FilterSearchBar from "@/components/ui/courses/filter-search-bar";
 import CategoryQuickLinks from "@/components/ui/courses/category-quick-links";
@@ -230,11 +230,6 @@ export default function Courses() {
                         <div className="flex-1 lg:max-w-4xl">
                             <CourseGrid
                                 courses={displayedCourses}
-                                currentPage={currentPage}
-                                onPageChange={handlePageChange}
-                                onLoadMore={handleLoadMore}
-                                hasMore={hasMore}
-                                isLoading={isLoading}
                                 totalCourses={allCourses.length}
                             />
                         </div>

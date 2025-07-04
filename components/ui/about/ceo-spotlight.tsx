@@ -97,13 +97,13 @@ export default function CeoSpotlight() {
                                 ESTC was born from a simple yet powerful belief: that every organization deserves access to world-class training that drives real, measurable results. In 2005, I founded this company with a vision to transform how businesses in Eastern Africa approach learning and development.
                             </p>
                             <p>
-                                What started as a small consultancy has grown into a trusted partner for over 500 organizations across the region. Our success isn't measured by the number of training sessions we deliver, but by the lasting impact we create in the careers and organizations we serve.
+                                What started as a small consultancy has grown into a trusted partner for over 500 organizations across the region. Our success isn&lsquo;t measured by the number of training sessions we deliver, but by the lasting impact we create in the careers and organizations we serve.
                             </p>
                             <p>
-                                I'm particularly proud of our milestone in 2020, when we successfully transitioned 95% of our programs to hybrid delivery models, ensuring our clients' learning never stopped despite global challenges. This adaptability and commitment to excellence defines who we are.
+                                I&lsquo;m particularly proud of our milestone in 2020, when we successfully transitioned 95% of our programs to hybrid delivery models, ensuring our clients&lsquo; learning never stopped despite global challenges. This adaptability and commitment to excellence defines who we are.
                             </p>
                             <p>
-                                As we look to the future, our promise remains unwavering: to continue delivering innovative, tailored learning solutions that empower organizations to thrive in an ever-evolving business landscape. Your success is our success, and we're committed to being your partner every step of the way.
+                                As we look to the future, our promise remains unwavering: to continue delivering innovative, tailored learning solutions that empower organizations to thrive in an ever-evolving business landscape. Your success is our success, and we&lsquo;re committed to being your partner every step of the way.
                             </p>
                         </div>
 

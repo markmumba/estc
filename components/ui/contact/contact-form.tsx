@@ -122,7 +122,7 @@ export default function ContactForm() {
                         Message Sent Successfully!
                     </h3>
                     <p className="font-source-sans text-gray-600">
-                        Thank you for contacting us. We'll get back to you within 24 hours.
+                        Thank you for contacting us. We&lsquo;ll get back to you within 24 hours.
                     </p>
                 </div>
             </div>
@@ -137,7 +137,7 @@ export default function ContactForm() {
                     Send us a Message
                 </h2>
                 <p className="font-source-sans text-gray-600">
-                    Fill out the form below and we'll get back to you as soon as possible.
+                    Fill out the form below and we&lsquo;ll get back to you as soon as possible.
                 </p>
             </div>
 

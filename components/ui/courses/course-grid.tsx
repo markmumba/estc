@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface Course {
     id: string;
@@ -18,11 +19,6 @@ interface Course {
 
 interface CourseGridProps {
     courses: Course[];
-    currentPage?: number;
-    onPageChange?: (page: number) => void;
-    onLoadMore?: () => void;
-    hasMore?: boolean;
-    isLoading?: boolean;
     totalCourses?: number;
 }
 
@@ -85,11 +81,6 @@ const StarRating = ({ rating }: { rating: number }) => {
 
 export default function CourseGrid({
     courses,
-    currentPage = 1,
-    onPageChange,
-    onLoadMore,
-    hasMore = false,
-    isLoading = false,
     totalCourses = 0
 }: CourseGridProps) {
     const [isVisible, setIsVisible] = useState(false);
@@ -156,10 +147,12 @@ export default function CourseGrid({
                         {/* Thumbnail Container */}
                         <div className="relative overflow-hidden">
                             <div className="aspect-w-16 aspect-h-9">
-                                <img
+                                <Image
                                     src={course.thumbnail}
                                     alt={`${course.title} course thumbnail`}
                                     className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+                                    width={400}
+                                    height={300}
                                     onError={(e) => {
                                         (e.target as HTMLImageElement).src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAgMTUwTDIwMCAxMDBMMzAwIDE1MEwyMDAgMjAwTDEwMCAxNTBaIiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE1MCIgcj0iMjAiIGZpbGw9IiNEN0Q5RDAiLz4KPC9zdmc+';
                                     }}

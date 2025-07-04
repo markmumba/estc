@@ -86,21 +86,19 @@ export default function Testimonials() {
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">
-                    <h2 
-                        className={`font-montserrat font-bold text-gray-800 mb-4 transition-all duration-700 ${
-                            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                        }`}
+                    <h2
+                        className={`font-montserrat font-bold text-gray-800 mb-4 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                            }`}
                         style={{ fontSize: 'clamp(1.5rem, 4vw, 2rem)' }}
                     >
                         What Our Clients Say
                     </h2>
-                    <p 
-                        className={`font-source-sans text-gray-600 max-w-2xl mx-auto transition-all duration-700 delay-200 ${
-                            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                        }`}
+                    <p
+                        className={`font-source-sans text-gray-600 max-w-2xl mx-auto transition-all duration-700 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                            }`}
                         style={{ fontSize: 'clamp(0.9rem, 2.5vw, 1rem)' }}
                     >
-                        Hear from organizations who've transformed through ESTC's training.
+                        Hear from organizations who&lsquo;ve transformed through ESTC&lsquo;s training.
                     </p>
                 </div>
 
@@ -111,13 +109,12 @@ export default function Testimonials() {
                         {testimonials.slice(0, 2).map((testimonial, index) => (
                             <div
                                 key={testimonial.id}
-                                className={`bg-light-gray rounded-lg p-8 transition-all duration-500 ${
-                                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                                }`}
+                                className={`bg-light-gray rounded-lg p-8 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                                    }`}
                                 style={{ animationDelay: `${index * 200}ms` }}
                             >
-                                <TestimonialContent 
-                                    testimonial={testimonial} 
+                                <TestimonialContent
+                                    testimonial={testimonial}
                                     hoveredLogo={hoveredLogo}
                                     setHoveredLogo={setHoveredLogo}
                                 />
@@ -129,13 +126,12 @@ export default function Testimonials() {
                     <div className="lg:hidden">
                         <div className="relative">
                             {/* Current Testimonial */}
-                            <div 
-                                className={`bg-light-gray rounded-lg p-8 transition-all duration-500 ${
-                                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                                }`}
+                            <div
+                                className={`bg-light-gray rounded-lg p-8 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                                    }`}
                             >
-                                <TestimonialContent 
-                                    testimonial={testimonials[currentSlide]} 
+                                <TestimonialContent
+                                    testimonial={testimonials[currentSlide]}
                                     hoveredLogo={hoveredLogo}
                                     setHoveredLogo={setHoveredLogo}
                                 />
@@ -168,11 +164,10 @@ export default function Testimonials() {
                                 <button
                                     key={index}
                                     onClick={() => goToSlide(index)}
-                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                        index === currentSlide 
-                                            ? 'bg-red-500 scale-125' 
-                                            : 'bg-gray-300 hover:bg-gray-400'
-                                    }`}
+                                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+                                        ? 'bg-red-500 scale-125'
+                                        : 'bg-gray-300 hover:bg-gray-400'
+                                        }`}
                                     aria-label={`Go to testimonial ${index + 1}`}
                                 />
                             ))}
@@ -196,13 +191,13 @@ export default function Testimonials() {
 }
 
 // Separate component for testimonial content
-function TestimonialContent({ 
-    testimonial, 
-    hoveredLogo, 
-    setHoveredLogo 
-}: { 
-    testimonial: Testimonial; 
-    hoveredLogo: number | null; 
+function TestimonialContent({
+    testimonial,
+    hoveredLogo,
+    setHoveredLogo
+}: {
+    testimonial: Testimonial;
+    hoveredLogo: number | null;
     setHoveredLogo: (id: number | null) => void;
 }) {
     return (
@@ -210,7 +205,7 @@ function TestimonialContent({
             {/* Quote */}
             <blockquote className="flex-grow">
                 <p className="text-gray-800 text-lg italic leading-relaxed mb-6 quote-pop">
-                    "{testimonial.quote}"
+                    &ldquo;{testimonial.quote}&rdquo;
                 </p>
             </blockquote>
 
@@ -218,14 +213,13 @@ function TestimonialContent({
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-4">
                     {/* Client Logo */}
-                    <div 
+                    <div
                         className="w-15 h-15 flex items-center justify-center"
                         onMouseEnter={() => setHoveredLogo(testimonial.id)}
                         onMouseLeave={() => setHoveredLogo(null)}
                     >
-                        <div className={`w-full h-full bg-gray-300 rounded flex items-center justify-center transition-all duration-200 ${
-                            hoveredLogo === testimonial.id ? 'filter-none' : 'filter grayscale'
-                        }`}>
+                        <div className={`w-full h-full bg-gray-300 rounded flex items-center justify-center transition-all duration-200 ${hoveredLogo === testimonial.id ? 'filter-none' : 'filter grayscale'
+                            }`}>
                             <span className="text-gray-500 font-source-sans text-sm font-medium">
                                 {testimonial.company}
                             </span>

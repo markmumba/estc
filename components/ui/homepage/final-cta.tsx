@@ -33,7 +33,7 @@ export default function FinalCta() {
     return (
         <section className="bg-white py-20 px-6 relative overflow-hidden">
             {/* Diagonal Red Accent Slice */}
-            <div 
+            <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
                     background: 'linear-gradient(135deg, #E53946 0%, #E53946 20%, transparent 20%, transparent 100%)',
@@ -46,33 +46,30 @@ export default function FinalCta() {
                     {/* Left Side - Content */}
                     <div className="text-center lg:text-left">
                         {/* Heading */}
-                        <h2 
-                            className={`font-montserrat font-extrabold text-gray-800 mb-6 transition-all duration-500 ${
-                                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                            }`}
+                        <h2
+                            className={`font-montserrat font-extrabold text-gray-800 mb-6 transition-all duration-500 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                                }`}
                             style={{ fontSize: 'clamp(1.8rem, 5vw, 2.5rem)' }}
                         >
                             Ready to Transform Your Team?
                         </h2>
 
                         {/* Subheading */}
-                        <p 
-                            className={`font-source-sans text-gray-600 mb-8 transition-all duration-500 delay-200 ${
-                                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                            }`}
+                        <p
+                            className={`font-source-sans text-gray-600 mb-8 transition-all duration-500 delay-200 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                                }`}
                             style={{ fontSize: 'clamp(1rem, 3vw, 1.2rem)' }}
                         >
-                            Let's design a tailored learning path that drives real impact.
+                            Let&lsquo;s design a tailored learning path that drives real impact.
                         </p>
 
                         {/* CTAs */}
-                        <div 
-                            className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-400 delay-400 ${
-                                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                            }`}
+                        <div
+                            className={`flex flex-col sm:flex-row gap-4 justify-center lg:justify-start transition-all duration-400 delay-400 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                                }`}
                         >
                             {/* Primary CTA */}
-                            <button 
+                            <button
                                 className="bg-teal-500 text-white px-8 py-4 rounded-lg font-source-sans font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-150"
                                 style={{ boxShadow: '0 2px 6px rgba(0,0,0,0.2)' }}
                             >
@@ -80,7 +77,7 @@ export default function FinalCta() {
                             </button>
 
                             {/* Secondary CTA */}
-                            <a 
+                            <a
                                 href="/downloads/course-catalog.pdf"
                                 className="text-red-500 font-source-sans font-medium text-lg hover:underline transition-all duration-200 relative group"
                             >
@@ -92,10 +89,9 @@ export default function FinalCta() {
 
                     {/* Right Side - Newsletter Signup */}
                     <div className="text-center lg:text-left">
-                        <div 
-                            className={`bg-gray-50 rounded-lg p-8 transition-all duration-500 delay-600 ${
-                                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-                            }`}
+                        <div
+                            className={`bg-gray-50 rounded-lg p-8 transition-all duration-500 delay-600 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                                }`}
                         >
                             <h3 className="font-montserrat font-semibold text-gray-800 mb-4 text-lg">
                                 Stay Updated
@@ -119,9 +115,8 @@ export default function FinalCta() {
                                 </div>
                                 <button
                                     type="submit"
-                                    className={`w-full border border-teal-500 text-teal-500 px-6 py-3 rounded-lg font-source-sans font-medium hover:bg-teal-500 hover:bg-opacity-10 transition-all duration-200 ${
-                                        showPulse ? 'animate-pulse-once' : ''
-                                    }`}
+                                    className={`w-full border border-teal-500 text-teal-500 px-6 py-3 rounded-lg font-source-sans font-medium hover:bg-teal-500 hover:bg-opacity-10 transition-all duration-200 ${showPulse ? 'animate-pulse-once' : ''
+                                        }`}
                                 >
                                     Subscribe
                                 </button>

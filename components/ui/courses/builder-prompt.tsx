@@ -51,12 +51,12 @@ export default function BuilderPrompt() {
                     <div className="text-center">
                         {/* Heading */}
                         <h2 className="font-montserrat font-semibold text-gray-800 mb-4 text-xl md:text-2xl lg:text-3xl">
-                            Can't Find Exactly What You Need?
+                            Can&lsquo;t Find Exactly What You Need?
                         </h2>
 
                         {/* Blurb */}
                         <p className="font-source-sans text-gray-600 mb-8 text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
-                            Build a custom training path tailored to your team's goals and schedule.
+                            Build a custom training path tailored to your team&lsquo;s goals and schedule.
                         </p>
 
                         {/* CTA Button */}

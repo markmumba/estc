@@ -82,7 +82,7 @@ export default function BlogPost() {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
                     <div className="text-center">
                         <h1 className="text-2xl font-bold text-gray-800 mb-4">Blog Post Not Found</h1>
-                        <p className="text-gray-600 mb-8">The blog post you're looking for doesn't exist.</p>
+                        <p className="text-gray-600 mb-8">The blog post you&apos;re looking for doesn&apos;t exist.</p>
                         <Link
                             href="/resources"
                             className="inline-flex items-center gap-2 text-teal-500 hover:text-teal-600 font-medium"
