@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
-
+    const router = useRouter();
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 20);
@@ -102,7 +103,7 @@ export default function Navbar() {
                         </Link>
 
                         {/* CTA Button */}
-                        <button className={`px-6 py-2.5 rounded-md font-montserrat font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg ${isScrolled
+                        <button onClick={() => router.push('/courses')} className={`px-6 py-2.5 rounded-md font-montserrat font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg ${isScrolled
                             ? 'bg-teal-500 text-white hover:bg-teal-600 shadow-md'
                             : 'bg-white/20 backdrop-blur-sm text-white border border-white/30 hover:bg-white/30'
                             }`}>
@@ -173,7 +174,7 @@ export default function Navbar() {
 
                         {/* Mobile CTA Button */}
                         <div className="px-4 pt-4">
-                            <button className="w-full bg-teal-500 text-white px-6 py-3 rounded-md font-montserrat font-semibold hover:bg-teal-600 hover:scale-105 transition-all duration-200 shadow-md">
+                            <button onClick={() => router.push('/courses')} className="w-full bg-teal-500 text-white px-6 py-3 rounded-md font-montserrat font-semibold hover:bg-teal-600 hover:scale-105 transition-all duration-200 shadow-md">
                                 Build Your Path
                             </button>
                         </div>

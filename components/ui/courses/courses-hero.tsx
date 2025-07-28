@@ -28,6 +28,16 @@ export default function CoursesHero() {
         return () => clearTimeout(timer);
     }, [isLoaded]);
 
+    const scrollToCourseGrid = () => {
+        const courseGridSection = document.querySelector('.course-grid-section');
+        if (courseGridSection) {
+            courseGridSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <section
             ref={sectionRef}
@@ -85,15 +95,23 @@ export default function CoursesHero() {
 
                     {/* CTAs */}
                     <div className={`flex flex-col sm:flex-row gap-4 lg:gap-6 transition-all duration-500 delay-600 ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-                        {/* Primary CTA */}
-                        <button className="inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-4 bg-teal-500 text-white font-montserrat font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap">
+                        {/* Primary CTA - Scroll to Course Grid */}
+                        <button
+                            onClick={scrollToCourseGrid}
+                            className="inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-4 bg-teal-500 text-white font-montserrat font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap"
+                        >
                             Build Your Learning Path
                         </button>
 
-                        {/* Secondary CTA */}
-                        <button className="inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-4 border-2 border-red-500 text-red-500 font-montserrat font-semibold rounded-lg bg-transparent hover:bg-red-500 hover:bg-opacity-10 transition-all duration-300 whitespace-nowrap">
+                        {/* Secondary CTA - Download PDF */}
+                        <a
+                            href="/TRAINING CATALOGUE.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-4 border-2 border-red-500 text-red-500 font-montserrat font-semibold rounded-lg bg-transparent hover:text-white hover:bg-red-500 hover:bg-opacity-10 transition-all duration-300 whitespace-nowrap"
+                        >
                             Download Full Catalog (PDF)
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

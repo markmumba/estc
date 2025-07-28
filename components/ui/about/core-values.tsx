@@ -99,7 +99,7 @@ export default function CoreValues() {
     }, [isVisible]);
 
     return (
-        <section ref={sectionRef} className="bg-light-gray py-16 md:py-20 lg:py-24 px-4 md:px-8 lg:px-16">
+        <section ref={sectionRef} className="bg-gradient-to-br from-yellow-200/90 via-yellow-100/90 to-white py-16 md:py-20 lg:py-24 px-4 md:px-8 lg:px-16">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-16">

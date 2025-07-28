@@ -23,72 +23,143 @@ export default function Hero() {
                     priority
                     sizes="100vw"
                 />
-                {/* Semi-transparent teal overlay */}
-                <div
-                    className="absolute inset-0 bg-teal-500"
-                    style={{ backgroundColor: 'rgba(110, 199, 192, 0.6)' }}
-                />
+                {/* Enhanced gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-teal-500/70 via-teal-600/60 to-blue-600/50" />
+                {/* Subtle pattern overlay */}
+                <div className="absolute inset-0 opacity-10 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]" />
             </div>
 
             {/* Navigation */}
             <Navbar />
 
+            {/* Floating decorative elements */}
+            <div className="absolute inset-0 z-5 pointer-events-none">
+                <div className={`absolute top-20 left-10 w-4 h-4 bg-yellow-orange rounded-full opacity-60 ${isLoaded ? 'animate-float' : 'opacity-0'}`} style={{ animationDelay: '0.5s' }} />
+                <div className={`absolute top-40 right-20 w-6 h-6 bg-red-500 rounded-full opacity-40 ${isLoaded ? 'animate-float-reverse' : 'opacity-0'}`} style={{ animationDelay: '1s' }} />
+                <div className={`absolute bottom-40 left-20 w-3 h-3 bg-teal-300 rounded-full opacity-50 ${isLoaded ? 'animate-float' : 'opacity-0'}`} style={{ animationDelay: '1.5s' }} />
+            </div>
+
             {/* Main Content */}
-            <div className="relative z-10 text-center px-6 max-w-6xl mx-auto">
+            <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
+                {/* Badge */}
+                <div
+                    className={`inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 mb-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
+                    style={{ animationDelay: '0s' }}
+                >
+                    <div className="w-2 h-2 bg-yellow-orange rounded-full animate-pulse" />
+                    <span className="font-source-sans font-semibold text-white text-sm">
+                        Trusted by 500+ Companies
+                    </span>
+                </div>
+
                 {/* Main Headline */}
                 <h1
-                    className={`font-montserrat font-extrabold text-white mb-6 leading-tight ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'
-                        }`}
+                    className={`font-montserrat font-extrabold text-white mb-8 leading-tight ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
                     style={{
-                        fontSize: 'clamp(1.8rem, 5vw, 3.5rem)',
-                        animationDelay: '0s'
+                        fontSize: 'clamp(2rem, 6vw, 4rem)',
+                        animationDelay: '0.2s',
+                        textShadow: '0 4px 8px rgba(0,0,0,0.3)'
                     }}
                 >
-                    Empower Your Team with Tailored Corporate Training
+                    <span className="block">Empower Your Team with</span>
+                    <span className="block bg-gradient-to-r from-yellow-orange via-white to-yellow-orange bg-clip-text text-transparent">
+                        Tailored Corporate Training
+                    </span>
                 </h1>
 
                 {/* Sub-headline */}
                 <p
-                    className={`font-source-sans text-light-gray mb-8 max-w-3xl mx-auto leading-relaxed ${isLoaded ? 'animate-fade-in' : 'opacity-0'
-                        }`}
+                    className={`font-source-sans text-white/90 mb-10 max-w-4xl mx-auto leading-relaxed ${isLoaded ? 'animate-fade-in' : 'opacity-0'}`}
                     style={{
-                        fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
-                        animationDelay: '0.3s'
+                        fontSize: 'clamp(1.1rem, 2.8vw, 1.4rem)',
+                        animationDelay: '0.4s',
+                        textShadow: '0 2px 4px rgba(0,0,0,0.2)'
                     }}
                 >
-                    Custom programs in Leadership, ICT, HR & more—designed to drive real impact.
+                    Custom programs in <span className="font-semibold text-yellow-orange">Leadership</span>, <span className="font-semibold text-yellow-orange">ICT</span>, <span className="font-semibold text-yellow-orange">HR</span> & more—designed to drive real impact and measurable results.
                 </p>
+
+                {/* Feature highlights */}
+                <div
+                    className={`flex flex-wrap justify-center gap-6 mb-12 ${isLoaded ? 'animate-fade-in' : 'opacity-0'}`}
+                    style={{ animationDelay: '0.6s' }}
+                >
+                    <div className="flex items-center gap-2 text-white/90">
+                        <svg className="w-5 h-5 text-yellow-orange" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="font-source-sans font-medium">Certified Programs</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-white/90">
+                        <svg className="w-5 h-5 text-yellow-orange" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="font-source-sans font-medium">Expert Instructors</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-white/90">
+                        <svg className="w-5 h-5 text-yellow-orange" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="font-source-sans font-medium">Flexible Learning</span>
+                    </div>
+                </div>
 
                 {/* CTA Buttons */}
                 <div
-                    className={`flex flex-col sm:flex-row gap-4 justify-center items-center ${isLoaded ? 'animate-scale-in' : 'opacity-0'
-                        }`}
-                    style={{ animationDelay: '0.6s' }}
+                    className={`flex flex-col sm:flex-row gap-6 justify-center items-center ${isLoaded ? 'animate-scale-in' : 'opacity-0'}`}
+                    style={{ animationDelay: '0.8s' }}
                 >
                     {/* Primary CTA */}
-                    <button
-                        className="bg-teal-500 text-white px-8 py-4 rounded-lg font-source-sans font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-150 w-full sm:w-auto"
-                        style={{ boxShadow: '0 2px 6px rgba(0,0,0,0.2)' }}
-                    >
-                        Build Your Learning Path
+                    <button className="group relative bg-gradient-to-r from-teal-500 to-teal-600 text-white px-10 py-5 rounded-xl font-source-sans font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full sm:w-auto overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-r from-yellow-orange to-yellow-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
+                        <span className="relative flex items-center gap-3">
+                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.727 1.17 1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                            </svg>
+                            Build Your Learning Path
+                        </span>
                     </button>
 
                     {/* Secondary CTA */}
-                    <button
-                        className="border-2 border-red-500 text-red-500 px-8 py-4 rounded-lg font-source-sans font-semibold text-lg hover:bg-red-500 hover:text-white hover:bg-opacity-10 transition-all duration-150 w-full sm:w-auto"
-                    >
-                        View All Courses
+                    <button className="group relative border-2 border-white/30 text-white px-10 py-5 rounded-xl font-source-sans font-bold text-lg hover:bg-white/10 hover:border-white/50 backdrop-blur-sm transition-all duration-300 w-full sm:w-auto">
+                        <span className="relative flex items-center gap-3">
+                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            View All Courses
+                        </span>
                     </button>
+                </div>
+
+                {/* Trust indicators */}
+                <div
+                    className={`mt-12 ${isLoaded ? 'animate-fade-in' : 'opacity-0'}`}
+                    style={{ animationDelay: '1s' }}
+                >
+                    <p className="text-white/70 text-sm mb-4 font-source-sans">Trusted by leading organizations</p>
+                    <div className="flex justify-center items-center gap-8 opacity-60">
+                        <div className="w-16 h-8 bg-white/20 rounded flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">COMPANY</span>
+                        </div>
+                        <div className="w-16 h-8 bg-white/20 rounded flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">COMPANY</span>
+                        </div>
+                        <div className="w-16 h-8 bg-white/20 rounded flex items-center justify-center">
+                            <span className="text-white text-xs font-bold">COMPANY</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            {/* Scroll Prompt */}
+            {/* Enhanced Scroll Prompt */}
             <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
                 <div
-                    className={`text-yellow-orange animate-bounce-subtle ${isLoaded ? 'opacity-100' : 'opacity-0'
-                        }`}
-                    style={{ animationDelay: '1s' }}
+                    className={`text-white/80 hover:text-yellow-orange transition-colors duration-300 cursor-pointer ${isLoaded ? 'animate-bounce-subtle' : 'opacity-0'}`}
+                    style={{ animationDelay: '1.2s' }}
                 >
+                    <div className="text-center mb-2">
+                        <span className="text-xs font-source-sans font-medium">Scroll to explore</span>
+                    </div>
                     <svg
                         className="w-8 h-8"
                         fill="currentColor"

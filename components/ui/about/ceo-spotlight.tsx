@@ -28,7 +28,7 @@ export default function CeoSpotlight() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative overflow-hidden">
+        <section id="ceo-spotlight" ref={sectionRef} className="relative overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
                 {/* Left Column - Background & Portrait */}
                 <div className="bg-teal-500 bg-opacity-15 flex items-center justify-center p-8 lg:p-16">
@@ -67,10 +67,10 @@ export default function CeoSpotlight() {
                             className={`transition-all duration-600 delay-200 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-8'}`}
                         >
                             <h3 className="font-montserrat font-semibold text-gray-800 text-xl lg:text-2xl mb-2">
-                                Jane Mwangi, PhD
+                                Helen Nguli
                             </h3>
                             <p className="font-source-sans italic text-gray-600 text-base lg:text-lg">
-                                CEO & Founder
+                                CEO & Founder of Exceptional Skills Training Center
                             </p>
                         </div>
                     </div>
@@ -94,16 +94,43 @@ export default function CeoSpotlight() {
                         {/* Message Text */}
                         <div className="font-source-sans text-gray-700 leading-relaxed space-y-4 mb-8">
                             <p>
-                                ESTC was born from a simple yet powerful belief: that every organization deserves access to world-class training that drives real, measurable results. In 2005, I founded this company with a vision to transform how businesses in Eastern Africa approach learning and development.
+                                ESTC was born from a simple yet powerful belief that every organization deserves access to
+                                world-class training that drives real meaningful, memorable and measurable results.
+                                In 2016, I founded this company with a vision to assist organizations achieve and
+                                maintain outstanding customer experiences in East Africa Region and beyond.
                             </p>
+
                             <p>
-                                What started as a small consultancy has grown into a trusted partner for over 500 organizations across the region. Our success isn&lsquo;t measured by the number of training sessions we deliver, but by the lasting impact we create in the careers and organizations we serve.
+                                What started as a small consultancy has grown into trusted partner for over 20
+                                organizations across the region where we have trained over 5000 participants. Our
+                                success is nor measured by the number of training sessions we deliver, but by the
+                                lasting impact we create in the people and organizations we serve.
                             </p>
+
                             <p>
-                                I&lsquo;m particularly proud of our milestone in 2020, when we successfully transitioned 95% of our programs to hybrid delivery models, ensuring our clients&lsquo; learning never stopped despite global challenges. This adaptability and commitment to excellence defines who we are.
+                                I am particularly proud of the partnership we have with Isuzu East Africa Limited for the
+                                past 10 years. Isuzu EA is has maintained the number one position in the Motor
+                                Industry in East Africa for over 12 years. We are happy to be associated with training of
+                                their teams in expertise of winning and retaining enthusiastic customers over the years
+                                by selling solutions.
                             </p>
+
                             <p>
-                                As we look to the future, our promise remains unwavering: to continue delivering innovative, tailored learning solutions that empower organizations to thrive in an ever-evolving business landscape. Your success is our success, and we&lsquo;re committed to being your partner every step of the way.
+                                Nothing is more important than acting with integrity, transparency, accountability and
+                                personal excellence every time we work with our esteemed clients.
+                            </p>
+
+                            <p>
+                                We are open to new strategies and methods that will improve on the delivery of our
+                                services and encourage feedback on all services offered in order to improve on delivery.
+                                We are inspired by client value and are committed to building long lasting relationships
+                                while responding to and anticipating customer needs.
+                            </p>
+
+                            <p>
+                                As we look to the future, our promise remains unwavering, to continue delivering
+                                exceptional and tailored learning solutions that empower organizations to thrive in an
+                                ever-evolving business landscape by unearthing the potential in their business!
                             </p>
                         </div>
 
@@ -122,15 +149,15 @@ export default function CeoSpotlight() {
                                     className={`transition-all duration-800 ${isSignatureVisible ? 'stroke-dasharray-200 stroke-dashoffset-0' : 'stroke-dasharray-200 stroke-dashoffset-200'}`}
                                 />
                                 <text x="20" y="20" className="text-sm font-source-sans font-medium fill-current">
-                                    Jane Mwangi
+                                    Helen Nguli
                                 </text>
                             </svg>
                         </div>
 
                         {/* CTA */}
-                        <button className="group border-2 border-teal-500 text-teal-500 px-8 py-3 rounded-lg font-source-sans font-semibold text-lg hover:bg-teal-500 hover:bg-opacity-10 hover:border-red-500 hover:text-red-500 transition-all duration-150">
-                            Read Full Bio
-                        </button>
+                        <a href="/contact" className="group border-2 border-teal-500 text-teal-500 px-8 py-3 rounded-lg font-source-sans font-semibold text-lg hover:bg-teal-500 hover:bg-opacity-10 hover:border-red-500 hover:text-red-500 transition-all duration-150">
+                            Contact Us
+                        </a>
                     </div>
                 </div>
             </div>

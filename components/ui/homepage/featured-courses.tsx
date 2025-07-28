@@ -1,12 +1,12 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 interface Course {
     id: number;
     title: string;
     category: 'Leadership' | 'ICT' | 'HR';
-    duration: string;
     mode: string;
     image: string;
     imageAlt: string;
@@ -17,54 +17,48 @@ const featuredCourses: Course[] = [
         id: 1,
         title: "Strategic Leadership Development",
         category: "Leadership",
-        duration: "3 Days",
         mode: "In-Person",
-        image: "/course-leadership.jpg",
+        image: "/courses/courses-1.jpg",
         imageAlt: "Leadership training session"
     },
     {
         id: 2,
         title: "Digital Transformation & ICT Strategy",
         category: "ICT",
-        duration: "2 Days",
         mode: "Hybrid",
-        image: "/course-ict.jpg",
+        image: "/courses/courses-2.jpg",
         imageAlt: "ICT strategy workshop"
     },
     {
         id: 3,
         title: "Modern HR Management Practices",
         category: "HR",
-        duration: "4 Days",
         mode: "In-Person",
-        image: "/course-hr.jpg",
+        image: "/courses/courses-3.jpg",
         imageAlt: "HR management training"
     },
     {
         id: 4,
         title: "Executive Communication Skills",
         category: "Leadership",
-        duration: "2 Days",
         mode: "Virtual",
-        image: "/course-communication.jpg",
+        image: "/courses/courses-4.jpg",
         imageAlt: "Communication skills workshop"
     },
     {
         id: 5,
         title: "Cybersecurity Fundamentals",
         category: "ICT",
-        duration: "3 Days",
         mode: "Hybrid",
-        image: "/course-cybersecurity.jpg",
+        image: "/courses/courses-5.jpg",
         imageAlt: "Cybersecurity training"
     },
     {
         id: 6,
         title: "Employee Engagement & Retention",
         category: "HR",
-        duration: "2 Days",
         mode: "In-Person",
-        image: "/course-engagement.jpg",
+        image: "/courses/courses-6.jpg",
         imageAlt: "Employee engagement workshop"
     }
 ];
@@ -184,10 +178,15 @@ export default function FeaturedCourses() {
                                 <div className="bg-white rounded-lg shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-200 cursor-pointer group">
                                     {/* Course Image */}
                                     <div className="relative h-48 rounded-t-lg overflow-hidden">
+                                        <Image
+                                            src={course.image}
+                                            alt={course.imageAlt}
+                                            fill
+                                            className="object-cover"
+                                            sizes="320px"
+                                            priority={index < 3}
+                                        />
                                         <div className="absolute inset-0 bg-gradient-to-br from-teal-500/20 to-transparent z-10" />
-                                        <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
-                                            <span className="text-gray-500 font-source-sans">Course Image</span>
-                                        </div>
                                     </div>
 
                                     {/* Course Content */}
@@ -206,13 +205,18 @@ export default function FeaturedCourses() {
 
                                         {/* Duration & Mode */}
                                         <p className="font-source-sans text-gray-500 text-sm mb-4">
-                                            {course.duration} • {course.mode}
+                                            {course.mode}
                                         </p>
 
                                         {/* Enquire Now Button */}
-                                        <button className="w-full border border-teal-500 text-teal-500 py-2 px-4 rounded-lg font-source-sans font-medium hover:bg-teal-500 hover:bg-opacity-10 transition-all duration-200 group-hover:border-teal-600 group-hover:text-teal-600">
+                                        <a
+                                            href={`https://wa.me/254720611517?text=${encodeURIComponent('Hey, I want to get more information about the ' + course.title)}`}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="w-full block border border-teal-500 text-teal-500 py-2 px-4 rounded-lg font-source-sans font-medium hover:bg-teal-500 hover:bg-opacity-10 transition-all duration-200 group-hover:border-teal-600 group-hover:text-teal-600 text-center"
+                                        >
                                             Enquire Now
-                                        </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

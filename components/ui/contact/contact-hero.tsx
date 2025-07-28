@@ -56,7 +56,7 @@ export default function ContactHero() {
                             </div>
                             <div className="text-left">
                                 <div className="text-sm text-teal-100">Call us</div>
-                                <div className="font-semibold">+254 700 000 000</div>
+                                <div className="font-semibold">+254720611517</div>
                             </div>
                         </div>
 
@@ -66,8 +66,8 @@ export default function ContactHero() {
                                 <Mail className="w-6 h-6 text-black" />
                             </div>
                             <div className="text-left">
-                                <div className="text-sm text-teal-100">Email us</div>
-                                <div className="font-semibold">info@estc.co.ke</div>
+                                <div className="text-sm text-teal-100">Email us: info@exceptionalskills.co.ke</div>
+                                <div className="font-semibold">info@exceptionalskills.co.ke</div>
                             </div>
                         </div>
 

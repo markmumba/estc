@@ -17,32 +17,12 @@ const offices: Office[] = [
     {
         id: '1',
         name: 'Nairobi Main Office',
-        address: 'Westlands Business District, 3rd Floor, ABC Building',
+        address: 'Nairobi, Kenya',
         city: 'Nairobi, Kenya',
-        phone: '+254 700 000 000',
-        email: 'nairobi@estc.co.ke',
+        phone: '+254720611517',
+        email: 'info@exceptionalskills.co.ke',
         hours: 'Mon - Fri: 8:00 AM - 6:00 PM',
         isMain: true
-    },
-    {
-        id: '2',
-        name: 'Mombasa Branch',
-        address: 'Mombasa CBD, 2nd Floor, XYZ Plaza',
-        city: 'Mombasa, Kenya',
-        phone: '+254 700 000 001',
-        email: 'mombasa@estc.co.ke',
-        hours: 'Mon - Fri: 8:00 AM - 5:00 PM',
-        isMain: false
-    },
-    {
-        id: '3',
-        name: 'Kisumu Branch',
-        address: 'Kisumu City Centre, 1st Floor, Lake View Building',
-        city: 'Kisumu, Kenya',
-        phone: '+254 700 000 002',
-        email: 'kisumu@estc.co.ke',
-        hours: 'Mon - Fri: 8:00 AM - 5:00 PM',
-        isMain: false
     }
 ];
 
@@ -164,61 +144,6 @@ export default function OfficeLocations() {
                 ))}
             </div>
 
-            {/* Additional Information */}
-            <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-                <h4 className="font-montserrat font-semibold text-gray-800 text-lg mb-4">
-                    Additional Information
-                </h4>
-                <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                        <div className="p-2 bg-blue-100 rounded-lg">
-                            <svg className="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h5 className="font-montserrat font-medium text-gray-800 text-sm mb-1">
-                                Parking Available
-                            </h5>
-                            <p className="font-source-sans text-gray-600 text-sm">
-                                Free parking available at all office locations
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                        <div className="p-2 bg-green-100 rounded-lg">
-                            <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h5 className="font-montserrat font-medium text-gray-800 text-sm mb-1">
-                                Accessibility
-                            </h5>
-                            <p className="font-source-sans text-gray-600 text-sm">
-                                All offices are wheelchair accessible
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="flex items-start gap-3">
-                        <div className="p-2 bg-purple-100 rounded-lg">
-                            <svg className="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a4 4 0 118 0v4m-4 6v6m-4-6h8m-8 6h8" />
-                            </svg>
-                        </div>
-                        <div>
-                            <h5 className="font-montserrat font-medium text-gray-800 text-sm mb-1">
-                                Security
-                            </h5>
-                            <p className="font-source-sans text-gray-600 text-sm">
-                                24/7 security and CCTV monitoring
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 } 

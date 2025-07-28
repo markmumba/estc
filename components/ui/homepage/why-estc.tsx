@@ -65,7 +65,7 @@ export default function WhyEstc() {
     }, []);
 
     return (
-        <section className="bg-light-gray py-16 px-6">
+        <section className="bg-gradient-to-br from-yellow-200/90 via-yellow-100/90 to-white py-16 px-6">
             <div className="max-w-7xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-12">

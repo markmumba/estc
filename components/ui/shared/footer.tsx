@@ -157,18 +157,18 @@ export default function Footer() {
                         <ul className="space-y-2">
                             <li>
                                 <a
-                                    href="mailto:info@estc.co.ke"
+                                    href="mailto:ngulihelen@gmail.com/info@exceptionalskills.co.ke"
                                     className="text-light-gray hover:text-teal-400 hover:underline transition-all duration-200 font-source-sans text-sm"
                                 >
-                                    info@estc.co.ke
+                                    info@exceptionalskills.co.ke
                                 </a>
                             </li>
                             <li>
                                 <a
-                                    href="tel:+254700000000"
+                                    href="tel:+254720611517"
                                     className="text-light-gray hover:text-teal-400 hover:underline transition-all duration-200 font-source-sans text-sm"
                                 >
-                                    +254 700 000000
+                                    +254 720 611517
                                 </a>
                             </li>
                             <li className="text-light-gray font-source-sans text-sm">
@@ -210,7 +210,7 @@ export default function Footer() {
                         <form onSubmit={handleSubscribe} className="space-y-3">
                             <input
                                 type="email"
-                                placeholder="Your email"
+                                placeholder="ngulihelen@gmail.com/info@exceptionalskills.co.ke"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                                 className={`w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-light-gray placeholder-gray-400 focus:outline-none focus:border-teal-400 transition-all duration-200 ${showShake ? 'animate-shake' : ''}`}

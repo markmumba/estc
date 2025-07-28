@@ -155,7 +155,7 @@ export default function ContactFAQ() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
-                            href="tel:+254700000000"
+                            href="tel:+254720611517"
                             className="inline-flex items-center justify-center px-6 py-3 bg-teal-500 text-white font-montserrat font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
                         >
                             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -164,7 +164,7 @@ export default function ContactFAQ() {
                             Call Us Now
                         </a>
                         <a
-                            href="mailto:info@estc.co.ke"
+                            href="mailto:info@exceptionalskills.co.ke"
                             className="inline-flex items-center justify-center px-6 py-3 border border-teal-500 text-teal-500 font-montserrat font-semibold rounded-lg hover:bg-teal-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
                         >
                             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

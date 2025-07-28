@@ -74,18 +74,18 @@ export default function ResourcesHero() {
                     <form onSubmit={handleSearch} className="max-w-2xl mx-auto mb-12">
                         <div className="relative">
                             <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                                <Search className="h-5 w-5 text-teal-300" />
+                                <Search className="h-5 w-5 text-gray-500" />
                             </div>
                             <input
                                 type="text"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 placeholder="Search articles, guides, and resources..."
-                                className="w-full pl-12 pr-4 py-4 bg-white bg-opacity-20 border border-white border-opacity-30 rounded-lg text-white placeholder-teal-200 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent font-source-sans"
+                                className="w-full pl-12 pr-24 py-4 bg-white border border-gray-200 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 font-source-sans shadow-lg"
                             />
                             <button
                                 type="submit"
-                                className="absolute inset-y-0 right-0 px-6 bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-montserrat font-medium rounded-r-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-white"
+                                className="absolute inset-y-0 right-0 px-6 bg-teal-500 hover:bg-teal-600 text-white font-montserrat font-medium rounded-r-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
                             >
                                 Search
                             </button>

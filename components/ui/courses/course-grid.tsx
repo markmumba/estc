@@ -145,31 +145,22 @@ export default function CourseGrid({
                         style={{ animationDelay: `${index * 100}ms` }}
                     >
                         {/* Thumbnail Container */}
-                        <div className="relative overflow-hidden">
-                            <div className="aspect-w-16 aspect-h-9">
-                                <Image
-                                    src={course.thumbnail}
-                                    alt={`${course.title} course thumbnail`}
-                                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
-                                    width={400}
-                                    height={300}
-                                    onError={(e) => {
-                                        (e.target as HTMLImageElement).src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAgMTUwTDIwMCAxMDBMMzAwIDE1MEwyMDAgMjAwTDEwMCAxNTBaIiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE1MCIgcj0iMjAiIGZpbGw9IiNEN0Q5RDAiLz4KPC9zdmc+';
-                                    }}
-                                />
-                            </div>
+                        <div className="relative overflow-hidden w-full h-64">
+                            <Image
+                                src={course.thumbnail}
+                                alt={`${course.title} course thumbnail`}
+                                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                onError={(e) => {
+                                    (e.target as HTMLImageElement).src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjNGNEY2Ii8+CjxwYXRoIGQ9Ik0xMDAgMTUwTDIwMCAxMDBMMzAwIDE1MEwyMDAgMjAwTDEwMCAxNTBaIiBmaWxsPSIjRjNGNEY2Ii8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjE1MCIgcj0iMjAiIGZpbGw9IiNEN0Q5RDAiLz4KPC9zdmc+';
+                                }}
+                            />
 
                             {/* Category Pill */}
                             <div className="absolute top-3 left-3">
                                 <span className={`inline-block px-3 py-1 text-xs font-semibold text-white rounded-full ${getCategoryColor(course.category)}`}>
                                     {course.category}
-                                </span>
-                            </div>
-
-                            {/* Price Badge */}
-                            <div className="absolute top-3 right-3">
-                                <span className="inline-block px-3 py-1 text-sm font-semibold text-gray-800 bg-white bg-opacity-90 rounded-full">
-                                    {formatPrice(course.price)}
                                 </span>
                             </div>
                         </div>
@@ -212,8 +203,10 @@ export default function CourseGrid({
                             </div>
 
                             {/* CTA Button */}
-                            <Link
-                                href={`/courses/${course.slug}`}
+                            <a
+                                href={`https://wa.me/254720611517?text=${encodeURIComponent(`Hey, I want to get more information about the ${course.title} course.`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 aria-label={`Enquire about ${course.title}`}
                                 className="inline-flex items-center justify-center w-full px-4 py-3 border border-teal-500 text-teal-500 font-montserrat font-medium text-sm rounded-lg hover:bg-teal-500 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2"
                             >
@@ -221,7 +214,7 @@ export default function CourseGrid({
                                 <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                 </svg>
-                            </Link>
+                            </a>
                         </div>
                     </article>
                 ))}
@@ -233,21 +226,6 @@ export default function CourseGrid({
                     -webkit-line-clamp: 2;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
-                }
-                
-                .aspect-w-16 {
-                    position: relative;
-                    padding-bottom: 56.25%;
-                }
-                
-                .aspect-w-16 > * {
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    top: 0;
-                    right: 0;
-                    bottom: 0;
-                    left: 0;
                 }
             `}</style>
         </section>

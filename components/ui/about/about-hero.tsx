@@ -58,10 +58,11 @@ export default function AboutHero() {
 
                 {/* Page Title */}
                 <h1
-                    className={`font-montserrat font-extrabold text-white mb-6 leading-tight transition-all duration-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    className={`font-montserrat font-extrabold text-white drop-shadow-lg mb-6 leading-tight transition-all duration-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{
                         fontSize: 'clamp(1.6rem, 4vw, 3rem)',
-                        animationDelay: '0.2s'
+                        animationDelay: '0.2s',
+                        textShadow: '0 4px 12px rgba(0,0,0,0.25)'
                     }}
                 >
                     About ESTC
@@ -69,10 +70,11 @@ export default function AboutHero() {
 
                 {/* Tagline */}
                 <p
-                    className={`font-source-sans italic text-light-gray mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed transition-all duration-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                    className={`font-source-sans italic text-white drop-shadow-md mb-12 max-w-3xl mx-auto lg:mx-0 leading-relaxed transition-all duration-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{
                         fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
-                        animationDelay: '0.4s'
+                        animationDelay: '0.4s',
+                        textShadow: '0 2px 8px rgba(0,0,0,0.18)'
                     }}
                 >
                     Shaping Corporate Learning in Eastern Africa Since 2005
@@ -84,23 +86,35 @@ export default function AboutHero() {
                     style={{ animationDelay: '0.6s' }}
                 >
                     {/* Primary CTA */}
-                    <button
-                        className="bg-red-500 text-white px-8 py-4 rounded-lg font-source-sans font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-150 w-full sm:w-auto"
+                    <a
+                        href="#ceo-spotlight"
+                        className="bg-red-500 text-white px-8 py-4 rounded-lg font-source-sans font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-150 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-opacity-50"
                         style={{
                             boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
-                            borderRadius: '8px'
+                            borderRadius: '8px',
+                            scrollBehavior: 'smooth'
                         }}
                     >
                         Meet Our CEO
-                    </button>
+                    </a>
 
                     {/* Secondary CTA */}
-                    <button
-                        className="border-2 border-teal-500 text-teal-500 px-8 py-4 rounded-lg font-source-sans font-semibold text-lg hover:bg-teal-500 hover:bg-opacity-10 transition-all duration-150 w-full sm:w-auto"
+                    <a
+                        href="#our-story"
+                        className="border-2 border-teal-500 text-teal-700 bg-white/80 px-8 py-4 rounded-lg font-source-sans font-semibold text-lg hover:bg-teal-500 hover:text-white hover:bg-opacity-10 transition-all duration-150 w-full sm:w-auto focus:outline-none focus:ring-2 focus:ring-teal-400 focus:ring-opacity-50"
+                        style={{
+                            scrollBehavior: 'smooth'
+                        }}
                     >
                         Our Story
-                    </button>
+                    </a>
                 </div>
+
+                <style jsx global>{`
+                    html {
+                        scroll-behavior: smooth;
+                    }
+                `}</style>
             </div>
 
             {/* Scroll Prompt */}

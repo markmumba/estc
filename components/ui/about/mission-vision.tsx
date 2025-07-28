@@ -41,7 +41,7 @@ export default function MissionVision() {
     }, []);
 
     return (
-        <section className="py-16 md:py-20 lg:py-25 px-4 md:px-20 lg:px-30">
+        <section className="bg-gradient-to-br from-teal-50 via-teal-100 to-white py-16 md:py-20 lg:py-25 px-4 md:px-20 lg:px-30">
             <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:gap-15 relative">
                     {/* Mission Column */}
@@ -51,7 +51,7 @@ export default function MissionVision() {
                             className={`mb-6 transition-all duration-500 ease-out ${isMissionVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-80'}`}
                         >
                             <div className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mx-auto lg:mx-0">
-                                <svg className="w-full h-full text-teal-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-full h-full text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83" />
                                 </svg>
@@ -72,7 +72,7 @@ export default function MissionVision() {
 
                         {/* Mission Text */}
                         <p
-                            className={`font-source-sans text-gray-600 leading-relaxed transition-all duration-600 ${isMissionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'}`}
+                            className={`font-source-sans text-gray-700 leading-relaxed transition-all duration-600 ${isMissionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'}`}
                             style={{
                                 fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
                                 lineHeight: '1.5',
@@ -84,7 +84,7 @@ export default function MissionVision() {
                     </div>
 
                     {/* Vertical Divider (Desktop Only) */}
-                    <div className="hidden lg:block absolute left-1/2 top-10 bottom-10 w-px bg-gray-200 transform -translate-x-1/2" />
+                    <div className="hidden lg:block absolute left-1/2 top-10 bottom-10 w-px bg-teal-300 transform -translate-x-1/2" />
 
                     {/* Vision Column */}
                     <div ref={visionRef} className="text-center lg:text-left mt-16 lg:mt-0">
@@ -116,7 +116,7 @@ export default function MissionVision() {
 
                         {/* Vision Text */}
                         <p
-                            className={`font-source-sans text-gray-600 leading-relaxed transition-all duration-600 ${isVisionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'}`}
+                            className={`font-source-sans text-gray-700 leading-relaxed transition-all duration-600 ${isVisionVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-1'}`}
                             style={{
                                 fontSize: 'clamp(0.9rem, 2.5vw, 1rem)',
                                 lineHeight: '1.5',
