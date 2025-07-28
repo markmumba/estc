@@ -100,7 +100,7 @@ export default function CoursesHero() {
                             onClick={scrollToCourseGrid}
                             className="inline-flex items-center justify-center px-6 py-4 md:px-8 md:py-4 bg-teal-500 text-white font-montserrat font-semibold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap"
                         >
-                            Build Your Learning Path
+                            Continue to Learning Path
                         </button>
 
                         {/* Secondary CTA - Download PDF */}

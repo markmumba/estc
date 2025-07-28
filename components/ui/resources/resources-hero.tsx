@@ -110,13 +110,7 @@ export default function ResourcesHero() {
                             <div className="text-teal-200 text-xs">Step-by-step</div>
                         </div>
 
-                        <div className="text-center">
-                            <div className="mx-auto w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">
-                                <Video className="w-6 h-6 text-black" />
-                            </div>
-                            <div className="text-white font-montserrat font-semibold text-sm">Videos</div>
-                            <div className="text-teal-200 text-xs">Visual learning</div>
-                        </div>
+                      
 
                         <div className="text-center">
                             <div className="mx-auto w-12 h-12 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-3">

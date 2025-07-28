@@ -3,10 +3,11 @@
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import Navbar from '../shared/navbar';
+import { useRouter } from 'next/navigation';
 
 export default function Hero() {
     const [isLoaded, setIsLoaded] = useState(false);
-
+    const router = useRouter();
     useEffect(() => {
         setIsLoaded(true);
     }, []);
@@ -41,16 +42,7 @@ export default function Hero() {
 
             {/* Main Content */}
             <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
-                {/* Badge */}
-                <div
-                    className={`inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full px-6 py-3 mb-8 ${isLoaded ? 'animate-fade-in-up' : 'opacity-0'}`}
-                    style={{ animationDelay: '0s' }}
-                >
-                    <div className="w-2 h-2 bg-yellow-orange rounded-full animate-pulse" />
-                    <span className="font-source-sans font-semibold text-white text-sm">
-                        Trusted by 500+ Companies
-                    </span>
-                </div>
+              
 
                 {/* Main Headline */}
                 <h1
@@ -110,7 +102,7 @@ export default function Hero() {
                     style={{ animationDelay: '0.8s' }}
                 >
                     {/* Primary CTA */}
-                    <button className="group relative bg-gradient-to-r from-teal-500 to-teal-600 text-white px-10 py-5 rounded-xl font-source-sans font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full sm:w-auto overflow-hidden">
+                    <button onClick={() => router.push('/courses')} className="group relative bg-gradient-to-r from-teal-500 to-teal-600 text-white px-10 py-5 rounded-xl font-source-sans font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 w-full sm:w-auto overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-r from-yellow-orange to-yellow-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                         <span className="relative flex items-center gap-3">
                             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -120,15 +112,7 @@ export default function Hero() {
                         </span>
                     </button>
 
-                    {/* Secondary CTA */}
-                    <button className="group relative border-2 border-white/30 text-white px-10 py-5 rounded-xl font-source-sans font-bold text-lg hover:bg-white/10 hover:border-white/50 backdrop-blur-sm transition-all duration-300 w-full sm:w-auto">
-                        <span className="relative flex items-center gap-3">
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                            </svg>
-                            View All Courses
-                        </span>
-                    </button>
+              
                 </div>
 
                 {/* Trust indicators */}
