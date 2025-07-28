@@ -163,7 +163,6 @@ const COURSES_PER_PAGE = 6;
 
 export default function Courses() {
     const [currentPage, setCurrentPage] = useState(1);
-    const [isLoading, setIsLoading] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState('All');
     const [filteredCourses, setFilteredCourses] = useState(allCourses);
     const [displayedCourses, setDisplayedCourses] = useState(allCourses.slice(0, COURSES_PER_PAGE));
@@ -198,10 +197,8 @@ export default function Courses() {
     };
 
     const totalPages = Math.ceil(filteredCourses.length / COURSES_PER_PAGE);
-    const hasMore = currentPage < totalPages;
 
     const handlePageChange = (page: number) => {
-        setIsLoading(true);
         setCurrentPage(page);
 
         // Simulate API delay
@@ -209,7 +206,6 @@ export default function Courses() {
             const startIndex = (page - 1) * COURSES_PER_PAGE;
             const endIndex = startIndex + COURSES_PER_PAGE;
             setDisplayedCourses(filteredCourses.slice(startIndex, endIndex));
-            setIsLoading(false);
 
             // Scroll to top of course grid
             document.querySelector('.course-grid-section')?.scrollIntoView({
@@ -219,21 +215,6 @@ export default function Courses() {
         }, 500);
     };
 
-    const handleLoadMore = () => {
-        setIsLoading(true);
-
-        // Simulate API call
-        setTimeout(() => {
-            const nextPage = currentPage + 1;
-            const startIndex = 0;
-            const endIndex = nextPage * COURSES_PER_PAGE;
-
-            // Add more courses to the existing list (for load more functionality)
-            setDisplayedCourses(filteredCourses.slice(startIndex, endIndex));
-            setCurrentPage(nextPage);
-            setIsLoading(false);
-        }, 1000);
-    };
 
     return (
         <main className="min-h-screen bg-gray-50">
@@ -270,8 +251,6 @@ export default function Courses() {
                     currentPage={currentPage}
                     totalPages={totalPages}
                     onPageChange={handlePageChange}
-                    hasMore={hasMore}
-                    isLoading={isLoading}
                 />
 
                 {/* Bottom CTA */}

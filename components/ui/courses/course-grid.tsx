@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+
 import Image from 'next/image';
 
 interface Course {
@@ -36,9 +36,7 @@ const getCategoryColor = (category: string) => {
     return colors[category] || 'bg-gray-500';
 };
 
-const formatPrice = (price: number) => {
-    return `KES ${price.toLocaleString()}`;
-};
+
 
 const StarRating = ({ rating }: { rating: number }) => {
     const stars = [];

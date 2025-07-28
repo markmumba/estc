@@ -32,7 +32,7 @@ export default function AwardsPartnerships() {
                     Our Recognized Partnerships
                 </h2>
                 <p className="font-source-sans text-gray-600 text-lg mb-12 max-w-xl mx-auto transition-all duration-700 delay-200">
-                    We are proud to have partnered with some of the region's most respected organizations.
+                    We are proud to have partnered with some of the region&apos;s most respected organizations.
                 </p>
 
                 {/* Isuzu Logo */}

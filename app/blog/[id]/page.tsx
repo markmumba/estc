@@ -2,7 +2,7 @@
 
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, BookOpen, Eye } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, Tag,  Eye } from 'lucide-react';
 import Navbar from "@/components/ui/shared/navbar";
 import Footer from "@/components/ui/shared/footer";
 import { blogPosts } from '../../../data/blog-posts';

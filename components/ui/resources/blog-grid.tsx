@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Calendar, Clock, ArrowRight, Tag, User } from 'lucide-react';
-import { blogPosts, BlogPost } from '../../../data/blog-posts';
+import { blogPosts } from '../../../data/blog-posts';
 
 const categories = ['All', 'Leadership', 'Team Building', 'Customer Service', 'Project Management', 'Marketing', 'Finance', 'Human Resources', 'Technology', 'Strategy', 'Communication', 'Change Management', 'Analytics'];
 

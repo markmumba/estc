@@ -6,18 +6,12 @@ interface PaginationProps {
     currentPage: number;
     totalPages: number;
     onPageChange: (page: number) => void;
-    onLoadMore?: () => void;
-    hasMore: boolean;
-    isLoading: boolean;
 }
 
 export default function Pagination({
     currentPage,
     totalPages,
     onPageChange,
-    onLoadMore,
-    hasMore,
-    isLoading
 }: PaginationProps) {
     const [isVisible, setIsVisible] = useState(false);
 
