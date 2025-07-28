@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Search, BookOpen, FileText, Video, Users } from 'lucide-react';
+import { Search, BookOpen, FileText,  Users } from 'lucide-react';
 
 export default function ResourcesHero() {
     const [isVisible, setIsVisible] = useState(false);
