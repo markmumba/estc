@@ -8,6 +8,12 @@ export default function CeoSpotlight() {
     const [isSignatureVisible, setIsSignatureVisible] = useState(false);
     const sectionRef = useRef<HTMLElement>(null);
 
+    const years = () => {
+        const currentYear = new Date().getFullYear();
+        const startYear = 2016;
+        return currentYear - startYear;
+    }
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
@@ -26,6 +32,7 @@ export default function CeoSpotlight() {
 
         return () => observer.disconnect();
     }, []);
+
 
     return (
         <section id="ceo-spotlight" ref={sectionRef} className="relative overflow-hidden">
@@ -88,7 +95,7 @@ export default function CeoSpotlight() {
 
                         {/* Subheading */}
                         <p className="font-source-sans italic text-gray-600 mb-8 text-lg lg:text-xl">
-                            Driving Excellence in Corporate Learning Since 2005
+                            Driving Excellence in Corporate Learning
                         </p>
 
                         {/* Message Text */}
@@ -109,7 +116,7 @@ export default function CeoSpotlight() {
 
                             <p>
                                 I am particularly proud of the partnership we have with Isuzu East Africa Limited for the
-                                past 10 years. Isuzu EA is has maintained the number one position in the Motor
+                                past {years()} years. Isuzu EA is has maintained the number one position in the Motor
                                 Industry in East Africa for over 12 years. We are happy to be associated with training of
                                 their teams in expertise of winning and retaining enthusiastic customers over the years
                                 by selling solutions.

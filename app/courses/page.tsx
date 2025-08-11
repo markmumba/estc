@@ -26,7 +26,7 @@ const allCourses = [
     },
     {
         id: '2',
-        title: 'Customer Service Excellence for Frontline Staff',
+        title: 'Customer Centricity and Service Excellence',
         category: 'Customer Experience',
         duration: '2 days',
         mode: 'In-House',

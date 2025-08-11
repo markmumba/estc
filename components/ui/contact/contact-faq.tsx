@@ -13,7 +13,7 @@ const faqData: FAQItem[] = [
     {
         id: '1',
         question: 'How quickly do you respond to inquiries?',
-        answer: 'We typically respond to all inquiries within 24 hours during business days. For urgent matters, you can call us directly at +254 700 000 000.',
+        answer: 'We typically respond to all inquiries within 24 hours during business days. For urgent matters, you can call us directly at +254720611517',
         category: 'General'
     },
     {
@@ -37,7 +37,7 @@ const faqData: FAQItem[] = [
     {
         id: '5',
         question: 'Can you conduct training at our office location?',
-        answer: 'Absolutely! We offer both in-house training at your premises and online training sessions. We can also arrange training at our facilities.',
+        answer: 'Absolutely! We offer both in-house training at your premises and online training sessions. We can also arrange training at other facilities.',
         category: 'Training'
     },
     {

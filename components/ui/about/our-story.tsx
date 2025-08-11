@@ -13,7 +13,7 @@ interface Milestone {
 
 const milestones: Milestone[] = [
     {
-        year: "2014",
+        year: "2016",
         title: "The Beginning",
         description: "Started with a simple vision: to make corporate training more accessible and impactful for organizations across the region.",
         color: "text-teal-600",
@@ -25,7 +25,7 @@ const milestones: Milestone[] = [
         )
     },
     {
-        year: "2016",
+        year: "2017",
         title: "First Major Success",
         description: "Reached our first milestone of serving over 50 organizations, proving that our approach to training was making a real difference.",
         color: "text-yellow-orange",

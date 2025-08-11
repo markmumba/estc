@@ -16,28 +16,28 @@ interface Office {
 const offices: Office[] = [
     {
         id: '1',
-        name: 'Nairobi Main Office',
+        name: 'Nairobi Embakasi Office',
         address: 'Nairobi, Kenya',
         city: 'Nairobi, Kenya',
         phone: '+254720611517',
         email: 'info@exceptionalskills.co.ke',
         hours: 'Mon - Fri: 8:00 AM - 6:00 PM',
-        isMain: true
+        isMain: false
     }
 ];
 
 export default function OfficeLocations() {
     const [activeOffice, setActiveOffice] = useState<string>('1');
-
+    const [showPhoneNumberModal, setShowPhoneNumberModal] = useState(false);
     return (
         <div className="space-y-6">
             {/* Header */}
             <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 <h3 className="font-montserrat font-bold text-gray-800 text-xl mb-3">
-                    Our Offices
+                    Our Office Location
                 </h3>
                 <p className="font-source-sans text-gray-600 text-sm">
-                    Visit us at any of our locations across Kenya
+                    Visit us at our office in Embakasi, Nairobi
                 </p>
             </div>
 
@@ -136,14 +136,25 @@ export default function OfficeLocations() {
 
                         {/* Action Button */}
                         <div className="mt-4 pt-4 border-t border-gray-100">
-                            <button className="w-full py-2 px-4 border border-teal-500 text-teal-500 font-montserrat font-medium text-sm rounded-lg hover:bg-teal-500 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2">
-                                Get Directions
+                            <button className="w-full py-2 px-4 border border-teal-500 text-teal-500 font-montserrat font-medium text-sm rounded-lg hover:bg-teal-500 hover:text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2" onClick={() => setShowPhoneNumberModal(true)}>
+                                Call Us
                             </button>
                         </div>
                     </div>
                 ))}
             </div>
 
+            {showPhoneNumberModal && <PhoneNumberModal />}
         </div>
     );
 } 
+
+const PhoneNumberModal = () => {
+    return (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div className="bg-white p-4 rounded-lg">
+                <h1>254720611517</h1>
+            </div>
+        </div>
+    );
+}   
