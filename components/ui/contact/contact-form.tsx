@@ -332,7 +332,7 @@ export default function ContactForm() {
                         rows={6}
                         value={formData.message}
                         onChange={(e) => handleInputChange('message', e.target.value)}
-                        className={`w-full px-5 py-4 border-2 rounded-xl focus:ring-2 focus:ring-teal-500 focus:border-teal-500 font-source-sans text-base resize-none transition-all duration-200 placeholder-gray-500 placeholder-opacity-75 ${errors.message ? 'border-red-400 bg-red-50' : 'border-gray-300 hover:border-gray-400'
+                        className={`w-full px-5 py-4 border-2 rounded-xl text-black focus:ring-2 focus:ring-teal-500 focus:border-teal-500 font-source-sans text-base resize-none transition-all duration-200 placeholder-gray-500 placeholder-opacity-75 ${errors.message ? 'border-red-400 bg-red-50' : 'border-gray-300 hover:border-gray-400'
                             }`}
                         placeholder="Tell us more about your training needs and how we can help..."
                     />

@@ -7,7 +7,6 @@ interface Office {
     name: string;
     address: string;
     city: string;
-    phone: string;
     email: string;
     hours: string;
     isMain: boolean;
@@ -19,7 +18,6 @@ const offices: Office[] = [
         name: 'Nairobi Embakasi Office',
         address: 'Nairobi, Kenya',
         city: 'Nairobi, Kenya',
-        phone: '+254720611517',
         email: 'info@exceptionalskills.co.ke',
         hours: 'Mon - Fri: 8:00 AM - 6:00 PM',
         isMain: false
@@ -59,19 +57,13 @@ export default function OfficeLocations() {
                                     </h4>
                                     {office.isMain && (
                                         <span className="px-2 py-1 bg-teal-100 text-teal-700 text-xs font-medium rounded-full">
-                                            Main Office
+                                            Embakasi Office
                                         </span>
                                     )}
                                 </div>
                                 <p className="font-source-sans text-gray-600 text-sm">
                                     {office.city}
                                 </p>
-                            </div>
-                            <div className="p-2 bg-gray-100 rounded-lg">
-                                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
                             </div>
                         </div>
 
@@ -91,20 +83,7 @@ export default function OfficeLocations() {
                                 </div>
                             </div>
 
-                            {/* Phone */}
-                            <div className="flex items-center gap-3">
-                                <div className="p-1.5 bg-gray-100 rounded-lg">
-                                    <svg className="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                    </svg>
-                                </div>
-                                <a
-                                    href={`tel:${office.phone}`}
-                                    className="font-source-sans text-gray-700 text-sm hover:text-teal-600 transition-colors duration-200"
-                                >
-                                    {office.phone}
-                                </a>
-                            </div>
+                        
 
                             {/* Email */}
                             <div className="flex items-center gap-3">
@@ -144,16 +123,24 @@ export default function OfficeLocations() {
                 ))}
             </div>
 
-            {showPhoneNumberModal && <PhoneNumberModal />}
+            {showPhoneNumberModal && <PhoneNumberModal onClose={() => setShowPhoneNumberModal(false)}   />}
         </div>
     );
 } 
 
-const PhoneNumberModal = () => {
+const PhoneNumberModal = ({ onClose }: { onClose: () => void }) => {
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-            <div className="bg-white p-4 rounded-lg">
-                <h1>254720611517</h1>
+        <div 
+            className="fixed inset-0 bg-black/40 flex items-center justify-center"
+            onClick={onClose}
+        >
+            <div 
+                className="bg-white p-4 rounded-lg flex flex-col items-center justify-center space-y-4"
+                onClick={e => e.stopPropagation()}
+            >
+                <h1 className="text-2xl font-bold text-black">0720611517</h1>
+                <p className="text-sm text-gray-500">Call us to discuss your training needs</p>
+                <button className="bg-teal-500 text-white px-4 py-2 rounded-lg" onClick={onClose}>Close</button>
             </div>
         </div>
     );
