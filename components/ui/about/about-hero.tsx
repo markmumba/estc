@@ -77,7 +77,7 @@ export default function AboutHero() {
                         textShadow: '0 2px 8px rgba(0,0,0,0.18)'
                     }}
                 >
-                    Shaping Corporate Learning in Eastern Africa Since 2005
+                    Shaping Corporate Learning in Eastern Africa Since 2016
                 </p>
 
                 {/* CTA Buttons */}
